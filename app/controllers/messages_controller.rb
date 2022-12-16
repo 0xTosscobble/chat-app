@@ -7,7 +7,11 @@ class MessagesController < ApplicationController
     @message =
       Message.new(message_params)
 
-    @message.save
+    if @message.save
+      
+    else
+     
+    end
   end
 
   def show
