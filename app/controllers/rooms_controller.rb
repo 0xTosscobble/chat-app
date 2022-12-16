@@ -2,6 +2,7 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = Room.all
+
   end
 
 
@@ -10,8 +11,14 @@ class RoomsController < ApplicationController
       Room.new(room_params)
 
     @room.save
-    end
+  end
 
+  def destroy
+    @room= Room.find(params[:id])
+    @room.destroy
+
+
+  end
 
     private
 

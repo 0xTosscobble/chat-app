@@ -5,10 +5,7 @@ class MessagesController < ApplicationController
 
   def create
     @message =
-      Message.new(
-        room: @room,
-        content: params.dig(:message, :content)
-      )
+      Message.new(message_params)
 
     @message.save
   end
@@ -16,5 +13,11 @@ class MessagesController < ApplicationController
   def show
   end
 
+
+  private
+
+    def message_params
+      params.require(:message).permit(:content, :room_id, :user_id)
+    end
 
 end
