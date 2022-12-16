@@ -6,12 +6,16 @@ class MessagesController < ApplicationController
   def create
     @message =
       Message.new(message_params)
-
-    if @message.save
-      
-    else
-     
-    end
+      if @message.save
+        # ActionCable.server.broadcast("MessagesChannel", {content: @message.content})
+        MessagesChannel.broadcast_to(
+          @room,
+          render_to_string(partial: "message", locals: {message: @message})
+        )
+        head :ok
+      else
+        render 'message'
+      end
   end
 
   def show

@@ -2,8 +2,9 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!
   
   def show
+    @current_room = Room.find(params[:id])
     @rooms = Room.all
-    @messages = Message.all
+    @messages = Message.where(room_id: @current_room)
     @current_user = current_user.id
   end
 
