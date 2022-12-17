@@ -7,14 +7,12 @@ class MessagesController < ApplicationController
     @message =
       Message.new(message_params)
       if @message.save
-        # ActionCable.server.broadcast("MessagesChannel", {content: @message.content})
-        MessagesChannel.broadcast_to(
-          @room,
-          render_to_string(partial: "message", locals: {message: @message})
-        )
+        ActionCable.server.broadcast("MessagesChannel", 
+        {content: @message.content, 
+        id: @message.user_id})
         head :ok
+        puts @message.user_id
       else
-        render 'message'
       end
   end
 

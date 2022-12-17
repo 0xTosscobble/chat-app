@@ -9,6 +9,15 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <style>
+    <%= ".msg-#{current_user}" %> {
+      justify-content: flex-end !important;
+    }
+    <%= ".cont-#{current_user}" %> {
+      background-color: rgb(243 244 246);
+    }
+    </style>
   </head>
 
   <body>

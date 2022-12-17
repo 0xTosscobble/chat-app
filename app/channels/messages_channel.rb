@@ -7,8 +7,4 @@ class MessagesChannel < ApplicationCable::Channel
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
   end
-
-  def receive(data)
-    puts data 
-  end
 end 
