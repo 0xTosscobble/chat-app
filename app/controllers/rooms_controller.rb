@@ -13,7 +13,19 @@ class RoomsController < ApplicationController
     @room =
       Room.new(room_params)
 
-    @room.save
+    respond_to do |format|
+      if @room.save
+       ActionCable.server.broadcast("RoomChannel",
+       {name: @room.name , room: @room.id})
+      format.turbo_stream
+      format.html {redirect_to room_url(@room), notice: "Room was succesfully created!"}
+      else 
+        format.html {render :new, status: :unprocessable_entity}
+      end
+    end
+
+    
+      
   end
 
   def destroy

@@ -1,22 +1,13 @@
-<div class="message-container" id="message-<%= message.id %>">
-  <i class="author">
-    <% User.find(message.user_id).name ? name = User.find(message.user_id).name : name = "Unknown Cat"  %>
-    <span><%= User.find(message.user_id) == current_user ? "me" : name %></span>
-    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-  </i>
-  <p><%= message.content %></p>
-</div>
-
 <% if message.user_id == @current_user %>
-                        <li class="flex justify-end">
-                        <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
-                        <span class="block"> <%= message.content %> </span>
-                        </div>
-                        </li>
-                     <% else %>
-                        <li class="flex justify-start">
-                        <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
-                        <span class="block"> <%= message.content %> </span>
-                        </div>
-                        </li>
-                    <% end %>
+      <li class="flex justify-end">
+      <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
+      <span class="block"> <%= message.content %> </span>
+      </div>
+      </li>
+   <% else %>
+      <li class="flex justify-start">
+      <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
+      <span class="block"> <%= message.content %> </span>
+      </div>
+      </li>
+  <% end %>

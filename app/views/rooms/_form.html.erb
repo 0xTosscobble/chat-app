@@ -1,0 +1,5 @@
+<%= form_with(model: room, id: "#{dom_id(room)}_form") do |form| %>
+    <%= form.text_field :name, class: "block w-full py-2 pl-10 bg-gray-100 rounded outline-none", 
+      placeholder: "Create Room" %>
+    <%= form.submit %>
+  <% end %>

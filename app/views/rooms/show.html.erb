@@ -10,40 +10,15 @@
                 </svg>
               </span>
               
-              <%= form_with model: Room.new do |form| %>
-                <%= form.text_field :name, class: "block w-full py-2 pl-10 bg-gray-100 rounded outline-none", 
-                  placeholder: "Create Room" %>
-                <%= form.submit %>
-              <% end %>
-            <!---
-             <input type="search" class="block w-full py-2 pl-10 bg-gray-100 rounded outline-none" name="search"
-                 placeholder="Search" required />
-                --->
+              <%= render partial: "rooms/form", locals: {room: Room.new} %>
+
             </div>
           </div>
 
           <ul class="overflow-auto h-[32rem]">
             <h2 class="my-2 mb-2 ml-2 text-lg text-gray-600">Chats</h2>
-            <li>
-              <% @rooms.each do |room| %>
-                <a
-                  class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none"
-                 href="<%= room_path(room) %>">
-                  <img class="object-cover w-10 h-10 rounded-full"
-                    src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg" alt="username" />
-                  <div class="w-full pb-2">
-                    <div class="flex justify-between">
-                      <span class="block ml-2 font-semibold text-gray-600"><%= room.name %></span>
-                      <span class="block ml-2 text-sm text-gray-600">
-                       Eventually destroy
-                      </span>
-                    </div>
-                    <span class="block ml-2 text-sm text-gray-600">This is a room</span>
-                  </div>
-                </a>
-              <% end %>
-             
-
+            <li data-chat-list='Room List'>
+              <%= render @rooms %>
             </li>
           </ul>
         </div>

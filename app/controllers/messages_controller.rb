@@ -11,7 +11,6 @@ class MessagesController < ApplicationController
         {content: @message.content, 
         id: @message.user_id})
         head :ok
-        puts @message.user_id
       else
       end
   end
