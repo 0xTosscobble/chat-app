@@ -1,0 +1,9 @@
+<%= turbo_stream.prepend "messages" do %>
+  <%= render "message", message: @message %>
+<% end %>
+
+<%= turbo_stream.replace "#{dom_id(Message.new)}" do %>
+  <%= render "messageform", message: Message.new %>
+<% end %>
+
+

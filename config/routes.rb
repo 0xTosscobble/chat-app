@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :rooms
   resources :messages
+  post '/banana', to: "messages#message", as: :message_page
 
   
 

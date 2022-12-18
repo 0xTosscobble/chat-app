@@ -4,11 +4,6 @@ consumer.subscriptions.create("RoomChannel", {
   connected() {
     // Called when the subscription is ready for use on the server
     console.log("something that you will recognize");
-    this.element.addEventListener("submit", clear);
-  },
-
-  clear() {
-    this.element.reset();
   },
 
   disconnected() {
