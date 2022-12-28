@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>ActionCableExercise</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,25 +11,29 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <style>
-    <%= ".msg-#{current_user}" %> {
-      justify-content: flex-end !important;
-    }
-    <%= ".cont-#{current_user}" %> {
-      background-color: rgb(243 244 246);
-    }
-    </style>
+      <style>
+      <%= ".msg-#{current_user}" %> {
+        justify-content: flex-end !important;
+      }
+      <%= ".cont-#{current_user}" %> {
+        background-color: rgb(243 244 246);
+      }
+      .page-container {
+        width: 100%;
+      }
+      </style>
   </head>
 
   <body>
-  <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+   <% if notice %>
+   <p class="alert alert-success"><%= notice %></p>
+   <% end %>
+   <% if alert %>
+   <p class="alert alert-danger"><%= alert %></p>
+   <% end %>
+     <main class="page-container mx-auto mt-28 px-5 flex flex-col h-full">
+       <%= yield %>
+     </main>
   </body>
+
 </html>
