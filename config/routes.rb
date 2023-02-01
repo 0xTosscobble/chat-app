@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   # root to: "devise/sessions#new"
   end
 
+  resources :users
   resources :rooms
   resources :messages
-  post '/banana', to: "messages#message", as: :message_page
+  
 
   
 

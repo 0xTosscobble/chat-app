@@ -4,5 +4,5 @@ class ApplicationController < ActionController::Base
         room_path("1")
       end
 
-    
+      
 end

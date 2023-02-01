@@ -1,5 +1,10 @@
+<header class="h-12 bg-gray-100">
+  <%= image_tag("icons8-ghost-64", :class => "ml-4 mb-2 h-12 w-auto")%>
+  <%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %>
+</header>
+ 
 <div class="bg-white">
-  
+   
     <!-- Hero section -->
     <div class="relative">
       <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
@@ -19,6 +24,7 @@
               <div class="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
                 <%= link_to "Sign Up", new_user_registration_path, class: "flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8" %>
                 <%= link_to "Sign In", new_user_session_path, class: "flex items-center justify-center rounded-md border border-transparent bg-indigo-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8" %>
+           
               </div>
             </div>
           </div>
