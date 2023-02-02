@@ -1,0 +1,6 @@
+<%= turbo_stream.prepend "rooms" do %>
+  <%= render "room", room: @room %>
+<% end %>
+<%= turbo_stream.replace "#{dom_id(Room.new)}_form" do %>
+  <%= render "form", room: Room.new %>
+<% end %>
