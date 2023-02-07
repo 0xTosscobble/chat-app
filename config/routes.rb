@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # root to: "devise/sessions#new"
   end
 
-  resources :users
+  # resources :users
   resources :rooms
   resources :messages
   
