@@ -19,8 +19,8 @@ class RoomsController < ApplicationController
        {name: @room.name , room: @room.id})
       format.turbo_stream
       format.html {redirect_to room_url(@room), notice: "Room was succesfully created!"}
-      else 
-        format.html {render :new, status: :unprocessable_entity}
+    #  else 
+    #    format.html {render :new, status: :unprocessable_entity}
       end
     end
 
