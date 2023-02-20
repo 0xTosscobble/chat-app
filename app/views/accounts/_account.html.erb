@@ -6,7 +6,8 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Image data:</strong>
-    <%= account.image_data %>
+    <%= image_tag @article.image_url if @article.image %>
+    <!-- <%= account.image_data %> -->
   </p>
 
   <% if action_name != "show" %>
