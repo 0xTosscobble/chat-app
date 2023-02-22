@@ -6,6 +6,7 @@ class RoomsController < ApplicationController
     @rooms = Room.all
     @messages = Message.where(room_id: @current_room)
     @current_user = current_user.id
+    @user_object = User.where(id: @current_user)
   end
 
 

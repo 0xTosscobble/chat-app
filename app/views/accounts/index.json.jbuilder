@@ -1,1 +1,1 @@
-json.array! @accounts, partial: "accounts/account", as: :account
+json.array! @account, partial: "accounts/account", as: :account
