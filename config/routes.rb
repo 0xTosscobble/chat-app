@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :accounts
   root to: 'home#index'
   get 'home/index'
   devise_for :users
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   # root to: "devise/sessions#new"
   end
 
-  resources :users
+  # resources :users
   resources :rooms
   resources :messages
   

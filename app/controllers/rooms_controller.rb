@@ -6,6 +6,7 @@ class RoomsController < ApplicationController
     @rooms = Room.all
     @messages = Message.where(room_id: @current_room)
     @current_user = current_user.id
+    @user_object = User.where(id: @current_user)
   end
 
 
@@ -19,8 +20,8 @@ class RoomsController < ApplicationController
        {name: @room.name , room: @room.id})
       format.turbo_stream
       format.html {redirect_to room_url(@room), notice: "Room was succesfully created!"}
-      else 
-        format.html {render :new, status: :unprocessable_entity}
+    #  else 
+    #    format.html {render :new, status: :unprocessable_entity}
       end
     end
 

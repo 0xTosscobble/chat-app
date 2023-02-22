@@ -14,9 +14,10 @@ class MessagesController < ApplicationController
         id: @message.user_id})
         head :ok
         format.turbo_stream
-        format.html {redirect_to message_url(@message), notice: "Message was succesfully created!"}
-      else 
-        format.html {render :new, status: :unprocessable_entity}
+        format.html {redirect_to message_url(@message)}
+      # else 
+        # format.html {render :new, status: :unprocessable_entity}
+        # format.html {redirect_to message_url(@message)}
       end
     end
   
