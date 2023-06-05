@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # resources :users
   resources :rooms
   resources :messages
+  get 'list', to: 'rooms#list', as: 'list_rooms'
   
 
   
