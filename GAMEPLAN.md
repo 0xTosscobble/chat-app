@@ -14,3 +14,10 @@ June 6th gameplan -
 -> Debug
 
 -> Push to production 
+
+
+
+
+
+----------------------------------
+hook up views so that way umm a user can access their corresponding account......  yeah. thank you yeah thats good. 
