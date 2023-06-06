@@ -5,16 +5,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+   def new
+     
+     super
+   end
 
   # POST /resource
-  # add code that says create account with user account id
-  
-  # def create
-  #   super
-  # end
+  # add code that says create account when a user signs up
+
+   def create
+      super
+      # Account.new(user_id: resource.id).save
+   end
 
   # GET /resource/edit
   # def edit

@@ -1,10 +1,9 @@
 June 6th gameplan -
 
--> Add devise controllers for configuration
+-> Add devise controllers for configuration - X
 
--> Set up relations between users and accounts
+-> Set up relations between users and accounts - X
 
--> Execute the required migrations to link account id and user id in db
 
 -> Upon linking account id and user id, make sure that room list page loads
 

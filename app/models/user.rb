@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :account
+
+  after_save :create_account
+
+  def create_account
+    Account.create(user_id: self.id)
+  end
+
 end
