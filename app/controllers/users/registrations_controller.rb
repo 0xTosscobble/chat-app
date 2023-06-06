@@ -15,7 +15,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
    def create
       super
-      # Account.new(user_id: resource.id).save
    end
 
   # GET /resource/edit

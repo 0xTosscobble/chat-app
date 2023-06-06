@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_one :account
 
-  after_save :create_account
+  after_create :create_account
 
   def create_account
     Account.create(user_id: self.id)
