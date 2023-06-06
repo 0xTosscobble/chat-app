@@ -9,6 +9,6 @@ export default class extends Controller {
 
   resetScroll() {
     messages.scrollTop = messages.scrollHeight - messages.clientHeight;
-    console.log("bana")
+    console.log("scroll controller")
   }
 }

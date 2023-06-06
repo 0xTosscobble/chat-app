@@ -11,7 +11,9 @@ class MessagesController < ApplicationController
       if @message.save
         ActionCable.server.broadcast("MessagesChannel", 
         {content: @message.content, 
-        id: @message.user_id})
+        id: @message.user_id,
+        room_id: @message.room_id,
+        })
         head :ok
         format.turbo_stream
         format.html {redirect_to message_url(@message)}

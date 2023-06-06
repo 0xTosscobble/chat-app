@@ -31,7 +31,7 @@
               </span>
             </div>
             <div id="messages" data-controller="scroll"  class="relative w-full p-6 overflow-y-auto h-[40rem]">
-              <ul data-chat-room='Best Room' class="space-y-2">
+              <ul data-chat-room='<%= @current_room.id %>' class="space-y-2">
                 
 
                 <% @messages.each do |message| %>
