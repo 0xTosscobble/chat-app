@@ -24,4 +24,5 @@ FIX --> Run rails tailwindcss:build before starting puma server to precompile ta
 ------------------------------------------------------------------------------
 TO-DO LIST
 
-- post sign in redirect to home page, replace sign up sign in buttons with sign out and rooms buttons. Rooms button goes to list.html.erb, sign out does well um it signs you out. 
+Alert when signing in but no user exists
+Alert when signing up but user exists

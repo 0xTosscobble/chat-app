@@ -1,5 +1,5 @@
-<header class="h-12 bg-gray-100">
-  <%= image_tag("icons8-ghost-64", :class => "ml-4 mb-2 h-12 w-auto")%>
+<header class="h-12 ">
+  <%# <%= image_tag("icons8-ghost-64", :class => "ml-4 mb-2 h-12 w-auto")%>
   <%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %>
 </header>
  
@@ -19,7 +19,7 @@
               <span class="block text-white">Welcome to the</span>
               <span class="block text-indigo-200">Fantum Chat App</span>
             </h1>
-            <p class="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-200 sm:max-w-3xl">Connect with friends by signing up for Fantum and starting a chat room with someone you know. This chat app is in alpha development, please try to break me.</p>
+            <p class="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-200 sm:max-w-3xl">Connect with people by signing up for the Fantum App and starting a chat room. Anyone can join!</p>
             <div class="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
               <div class="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
                 
