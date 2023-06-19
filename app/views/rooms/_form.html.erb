@@ -1,5 +1,5 @@
 <%= form_with(model: room, id: "#{dom_id(room)}_form", :html => {:class => "flex"}) do |form| %>
     <%= form.text_field :name, class: "block w-full py-2 pl-2 bg-gray-100 rounded outline-none", 
       placeholder: "Create Room" %>
-    <%= form.submit class: "ml-20 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-green-600/20" %>
+    <%= form.submit class: "ml-20 inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10" %>
   <% end %>
