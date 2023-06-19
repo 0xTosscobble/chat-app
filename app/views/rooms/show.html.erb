@@ -33,15 +33,25 @@
                 <% @messages.each do |message| %>
                      <% if message.user_id == @current_user %>
                         <li class="flex justify-end">
-                        <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
-                        <span class="block"> <%= message.content %> </span>
-                        </div>
+                          <div class="column">
+                            <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
+                              <span class="block"> <%= message.content %> </span>                  
+                            </div>
+                            <div class="relative max-w-xl px-4 py-2 text-gray-700 text-fu">
+                              <span class="block"> <%= Account.find_by(id: message.user_id).username %> </span>
+                            </div>
+                          </div>
                         </li>
                      <% else %>
                         <li class="flex justify-start">
-                        <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
-                        <span class="block"> <%= message.content %> </span>
-                        </div>
+                          <div class="column">
+                            <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
+                              <span class="block"> <%= message.content %> </span>
+                            </div>
+                            <div class="relative max-w-xl px-4 py-2 text-gray-700 text-fu">
+                              <span class="block"> <%= Account.find_by(id: message.user_id).username %> </span>
+                            </div>
+                          </div>
                         </li>
                     <% end %>
                 <% end %>
