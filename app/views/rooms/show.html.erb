@@ -38,7 +38,7 @@
                               <span class="block"> <%= message.content %> </span>                  
                             </div>
                             <div class="relative max-w-xl px-4 py-2 text-gray-700 text-fu">
-                              <span class="block"> <%= Account.find_by(id: message.user_id).username %> </span>
+                              <span class="block"> <%= Account.find_by(user_id: message.user_id).username %> </span>
                             </div>
                           </div>
                         </li>
@@ -49,7 +49,7 @@
                               <span class="block"> <%= message.content %> </span>
                             </div>
                             <div class="relative max-w-xl px-4 py-2 text-gray-700 text-fu">
-                              <span class="block"> <%= Account.find_by(id: message.user_id).username %> </span>
+                              <span class="block"> <%= Account.find_by(user_id: message.user_id).username %> </span>
                             </div>
                           </div>
                         </li>

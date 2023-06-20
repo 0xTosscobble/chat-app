@@ -4,9 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :account, dependent: :destroy
+  has_one :account, dependent: :destroy, inverse_of: :user
+  has_many :messages, dependent: :destroy
 
-  after_create :create_account
+
+  
+
+  accepts_nested_attributes_for :account
 
   def create_account
     Account.create(user_id: self.id)

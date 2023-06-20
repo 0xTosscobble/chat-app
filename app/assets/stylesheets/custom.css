@@ -10,6 +10,10 @@
     margin-top: 10px;
 }
 
+.mt-20 {
+    margin-top: 20px;
+}
+
 .text-fu {
     font-size: 0.75rem; /* 12px */
     line-height: 1rem; /* 16px */

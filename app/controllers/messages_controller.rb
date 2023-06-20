@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
         {content: @message.content, 
         id: @message.user_id,
         room_id: @message.room_id,
-        username: Account.find_by(id: @message.user_id).username,
+        username: Account.find_by(user_id: @message.user_id).username,
         })
         head :ok
         format.turbo_stream
