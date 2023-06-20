@@ -25,7 +25,7 @@ consumer.subscriptions.create( {channel: "MessagesChannel"}, {
   },
 
   createLine(data) {
-      return ' <li id="message-box" class="flex justify-start msg-' + data["id"] + '"> <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow cont-' + data["id"] + '"> <span class="block">' + data["content"] + '</span> </div> </li> '
+      return ' <li id="message-box" class="flex justify-start msg-' + data["id"] + '"> <div class="column"> <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow cont-' + data["id"] + '"> <span class="block">' + data["content"] + '</span> </div> <div class="relative max-w-xl px-4 py-2 text-gray-700 text-fu"> <span class="block">' + data["username"] + '</span></div> </div> </li> '
     
   }
 });
