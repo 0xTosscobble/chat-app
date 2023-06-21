@@ -1,7 +1,7 @@
 <div class="container mx-auto">
 <div class="flex justify-end">
-  <%= link_to "Account", account_path(:account => @user_object.try(:accounts_id)), class: "mt-10 inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10" %>
-  <%= link_to "Log Out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete}, class: "mt-10 ml-20 mb-10 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-red-600/10" %>
+  <%= link_to "Account", account_path(:account => @user_object.try(:accounts_id)), class: "mt-10 mb-10 inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10" %>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete}, class: "mt-10 ml-20 mb-10 inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10" %>
 </div>
       <div class="min-w-full border rounded lg:grid lg:grid-cols-3">
         <div class="border-r border-gray-300 lg:col-span-1">
