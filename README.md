@@ -1,28 +1,13 @@
 # README
 
-This application is a Chat App powered by Rails.
+This is a Chat App built in Ruby 3.0.4, and Rails 7.0.5
 
-I used Turbo and ActionCable for the instant message loading,
-I also used Devise for user authentication and login.
+Turbo and ActionCable for the instant message loading.
 
-Using this application you can create an account, and link a username / pfp to that account.
-After you have signed in, you'll be redirected to the chat rooms where you can create rooms and chat with other people who are online.
+Authentication through Devise.
 
------------------------------------------------------------------------------
-Common errors - 
+Deployed to - https://chat-app-rails-b0iy.onrender.com/
 
-[Sprockets::Rails::Helper::AssetNotFound in Home#index
-The asset "tailwind.css" is not present in the asset pipeline.]
-
-FIX --> Run rails tailwindcss:build before starting puma server to precompile tailwind. 
-
-[Couldn't find room with 'id'=1]
+The goal while making this project was learning how to use ActionCable and Turbo, and how to deploy a Rails app to Render.
 
 
-
-
-------------------------------------------------------------------------------
-TO-DO LIST
-
-Alert when signing in but no user exists
-Alert when signing up but user exists
