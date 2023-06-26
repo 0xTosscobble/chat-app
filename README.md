@@ -2,7 +2,7 @@
 
 This is a Chat App built in Ruby 3.0.4, and Rails 7.0.5
 
-Turbo and ActionCable for the instant message loading.
+Turbo,ActionCable, and Redis for the instant message loading.
 
 Authentication through Devise.
 
