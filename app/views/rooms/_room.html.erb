@@ -1,13 +1,10 @@
 <a
-    class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none"
+    class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 
+    cursor-pointer hover:bg-gray-100 focus:outline-none"
     href="<%= room_path(room) %>">
     <div class="w-full pb-2">
-    <div class="flex justify-between">
-        <span class="block ml-2 font-semibold text-gray-600"><%= room.name %></span>
-     <!--   <span class="block ml-2 text-sm text-gray-600">
-        Eventually destroy
-        </span> -->
-    </div>
-    <!-- <span class="block ml-2 text-sm text-gray-600"></span> -->
+        <div class="flex justify-between">
+            <span class="block ml-2 font-semibold text-gray-600"><%= room.name %></span>
+        </div>
     </div>
 </a>

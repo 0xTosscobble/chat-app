@@ -1,6 +1,8 @@
 
-  <%= form_with(model: message, id: "#{dom_id(message)}" , data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }, :html => {:class => "flex"}) do |form| %>
-    <%= form.text_field :content, class: "block w-full py-2 pl-4 mx-3 bg-gray-100 rounded-full outline-none focus:text-gray-700"  %>
+  <%= form_with(model: message, id: "#{dom_id(message)}" , data: { controller: "reset-form", 
+  action: "turbo:submit-end->reset-form#reset" }, :html => {:class => "flex"}) do |form| %>
+    <%= form.text_field :content, class: "block w-full py-2 pl-4 mx-3 bg-gray-100 rounded-full outline-none 
+    focus:text-gray-700"  %>
     <%= form.hidden_field :room_id, value: room_id %>
     <%= form.hidden_field :user_id, value: user_id %>
 
