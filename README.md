@@ -8,6 +8,6 @@ Authentication through Devise.
 
 Deployed to - https://chat-app-rails-b0iy.onrender.com/
 
-The goal while making this project was learning how to use ActionCable and Turbo, and how to deploy a Rails app to Render.
+The goal while making this project was learning how to use ActionCable, Turbo, Redis, and how to deploy a Rails app to Render.
 
 
